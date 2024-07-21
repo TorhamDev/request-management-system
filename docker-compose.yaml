@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+  redis:
+    image: redis
+    restart: always
+    container_name: master_redis
+    ports:
+      - '6379:6379'
+    networks:
+      - main
+
+
+
+networks:
+  main:
+    driver: bridge
